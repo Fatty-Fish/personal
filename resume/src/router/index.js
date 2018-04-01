@@ -17,6 +17,9 @@ export default new Router({
       path: '/',
       name: 'personal',
       component: Personal,
+      meta:{
+        index: 1
+      },
       children: [{
         path:"life",
         component: life
@@ -25,12 +28,18 @@ export default new Router({
     {
       path:"/objective",
       name:"objective",
-      component: Objective
+      component: Objective,
+      meta:{
+        index: 2
+      }
     },
     {
       path:"/education",
       name:"education",
       component:Education,
+      meta:{
+        index: 3
+      },
       children: [{
         path:"photo",
         component:photo
@@ -39,12 +48,18 @@ export default new Router({
     {
       path:"/skills",
       name:"skills",
-      component:Skills
+      component:Skills,
+      meta:{
+        index: 4
+      }
     },
     {
       path:"/projectExperiences",
       name:"experiences",
-      component: Experiences
+      component: Experiences,
+      meta:{
+        index: 5
+      }
     },
     {
       path:"*",

@@ -4,9 +4,9 @@
 	  <div class = "box">
       <div class = "demo"></div>
       <div class = "demo"></div>
-      <div class = "demo"></div>
-      <div class = "demo"></div>
       <div class = "demo">没了没了</div>
+      <div class = "demo"></div>
+      <div class = "demo"></div>
       <div class = "demo"></div>
 	  </div>
   </div>
@@ -57,7 +57,7 @@ export default {};
         transform: rotateX(90deg) translateZ(150px);
       }
       &:nth-of-type(3) {
-        background-image: url("../assets/achive2.jpg");
+        background: rgb(40, 193, 240);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: 0 0;
@@ -71,7 +71,7 @@ export default {};
         transform: rotateX(-90deg) translateZ(150px);
       }
       &:nth-of-type(5) {
-        background: rgb(40, 193, 240);
+        background-image: url("../assets/achive2.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: 0 0;

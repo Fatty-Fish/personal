@@ -1,5 +1,5 @@
 <template>
-  <div id = "app">
+  <div>
     <h3>豆瓣音乐动态页面仿写：</h3><a href = "https://fatty-fish.github.io/douban/douban.html">点我看看</a> 
     <h4>技术：</h4>html+css+jQuery+ajax; <h4>总结：</h4>用到flex布局，jQuery的animate动画和自制ajax函数获取数据；虽然写页面前，想好了要怎样浮动，怎样脱离层定位，但布局经验还不成熟，越到后面总想着补短，我应该要结合每一部分的功能效果来布局。flex很好用，我主要用在了ul标签上。js里我写了一个轮播图函数和制作页面里重复标签的函数，轮播图的运动主要依靠jQuery的animate函数。在搜索框获取豆瓣开源数据的是jQuery的$.ajax,本想用自己封装的ajax函数，但是受浏览器同源限制，又尝试用jsonp来跨域，但豆瓣方响应头并未允许。所以用到了jQuery封装的结合了jsonp的$.ajax。  
     <h3>计算器：</h3><a href = "https://fatty-fish.github.io/calculator/index.html">看看去</a>
