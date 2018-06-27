@@ -17,11 +17,10 @@ export default {};
 </script>
 <style lang="less" scoped>
 .wrapper {
-  position: absolute;
+  position: relative;
   left:50%;
   transform: translateX(-50%);
-  width: 800px;
-  height: 800px;
+  height: 600px;
   perspective: 2000px;
   .box {
     position: absolute;

@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <div class = "motto">
-      <img src="./assets/motto.jpg">
+    <div class = "top">
+      <div class = "motto">
+        <img src="./assets/motto.jpg">
+      </div>
+      <ul class  ="nav">
+        <router-link to = "/" tag = "li">主页</router-link>
+        <router-link to = "/education" tag = "li">教育</router-link>
+        <router-link to = "/skills" tag = "li">技能</router-link>
+        <router-link to = "/projectExperiences" tag = "li">项目</router-link>
+        <router-link to = "/objective" tag = "li">idea</router-link>
+      </ul>
     </div>
-    <ul class  ="nav">
-      <router-link to = "/" tag = "li">主页</router-link>
-      <router-link to = "/education" tag = "li">教育</router-link>
-      <router-link to = "/skills" tag = "li">技能</router-link>
-      <router-link to = "/projectExperiences" tag = "li">项目</router-link>
-      <router-link to = "/objective" tag = "li">idea</router-link>
-    </ul>
     <transition :name = "direction">
     <router-view class = "router"></router-view>      
     </transition>
@@ -38,45 +40,49 @@ export default {
   padding: 0;
   margin: 0;
   #app {
-    // margin: 0 200px;
-    .motto {
-      position: absolute;
-      top: 23%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 1px solid gray;
-      background:dimgray;
-      border-radius: 100px;
-      overflow: hidden;
-      padding: 20px;
-      width: 200px;
-      height: 200px;
-      img {
-        width: 100%;
-        height: 100%;
+    position:relative;
+    margin:50px 50px;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    .top {
+      padding:20px;
+      display: flex;
+      .motto {
+        flex:1;
+        height:100px;
+        border: 1px solid gray;
+        background:yellow;
+        border-radius: 100px;
+        overflow: hidden;
+        padding: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
-    }
-    .nav {
-      position: absolute;
-      list-style: none;
-      text-align: center;
-      width: 100%;
-      height:100px;
-      top:50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      li {
-        display: inline-block;
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-        margin: 10px;
-        cursor: pointer;
+      .nav {
+        flex:10;
+        list-style: none;
         text-align: center;
-        color: black;
-      }
-      .active {
-        color: red;
+        li {
+          display: inline-block;
+          height: 50px;
+          width: 50px;
+          font-size:18px;
+          font-weight: bold;
+          line-height: 50px;
+          margin: 50px;
+          cursor: pointer;
+          text-align: center;
+          color: black;
+        }
+        .active {
+          color: red;
+          border: 2px solid yellow;
+          border-radius: 20%;
+          box-shadow: 2px 2px 2px red;
+          background-color: rgba(248, 252, 7, 0.849)
+        }
       }
     }
     .left-enter {
@@ -124,10 +130,12 @@ export default {
       transform: translateX(-100%)
     }
     .router {
-      // margin-top: 400px;
       position:absolute;
-      top:400px;
-      margin: 0px 50px 50px 50px;
+      width:100%;
+      padding-bottom:20px;
+      border-bottom: 2px solid rgba(147, 150, 17, 0.849);
+      text-indent:2em;
+      background-color: rgba(221, 225, 0, 0.233);
     }
   }
 }
